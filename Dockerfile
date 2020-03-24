@@ -113,12 +113,12 @@ RUN set -eux; \
     ruby --version; \
     gem --version; \
     bundle --version
-
 ENV GEM_HOME /usr/local/bundle
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 \
     BUNDLE_APP_CONFIG="$GEM_HOME"
 ENV PATH $GEM_HOME/bin:$PATH
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
+
 ENV GOLANG_VERSION 1.14.1
 RUN set -eux; \
     dpkgArch="$(dpkg --print-architecture)"; \
