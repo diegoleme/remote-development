@@ -220,3 +220,4 @@ RUN curl -L https://github.com/sharkdp/bat/releases/download/v0.10.0/bat-v0.10.0
 
 RUN apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
 WORKDIR /root
+ENTRYPOINT ["zsh"]
